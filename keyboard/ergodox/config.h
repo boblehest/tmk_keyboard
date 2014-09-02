@@ -77,17 +77,17 @@ Project located at <https://github.com/benblazak/ergodox-firmware>
  */
 
 /* disable debug print */
-//#define NO_DEBUG
+//#define NO_DEBUG // already disabled
 
 /* disable print */
-//#define NO_PRINT
+//#define NO_PRINT // already disabled
 
 /* disable action features */
 //#define NO_ACTION_LAYER
-//#define NO_ACTION_TAPPING
-//#define NO_ACTION_ONESHOT
-//#define NO_ACTION_MACRO
-//#define NO_ACTION_FUNCTION
+//#define NO_ACTION_TAPPING // Also sued for momentary layer switch
+#define NO_ACTION_ONESHOT
+#define NO_ACTION_MACRO
+#define NO_ACTION_FUNCTION
 //#define DEBUG_MATRIX_SCAN_RATE
 
 #endif
