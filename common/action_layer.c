@@ -3,6 +3,7 @@
 #include "action.h"
 #include "util.h"
 #include "action_layer.h"
+#include "ergodox.h"
 
 #ifdef DEBUG_ACTION
 #include "debug.h"
@@ -64,6 +65,14 @@ static void layer_state_set(uint32_t state)
     layer_state = state;
     layer_debug(); dprintln();
     clear_keyboard_but_mods(); // To avoid stuck keys
+    ergodox_right_led_2_off();
+    ergodox_right_led_3_off();
+    if (layer_state & 4) {
+      ergodox_right_led_2_on();
+    }
+    if (layer_state & 2) {
+      ergodox_right_led_3_on();
+    }
 }
 
 void layer_clear(void)
