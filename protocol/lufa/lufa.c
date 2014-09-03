@@ -157,7 +157,7 @@ void EVENT_USB_Device_Disconnect(void)
 void EVENT_USB_Device_Reset(void)
 {
 }
-
+#undef SLEEP_LED_ENABLE // HaX
 void EVENT_USB_Device_Suspend()
 {
 #ifdef SLEEP_LED_ENABLE
