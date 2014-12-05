@@ -1,22 +1,22 @@
 static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KEYMAP(
          // left hand
-         GRV,    1,    2,    3,    4,    5, PSCR,
+         GRV,    1,    2,    3,    4,    5,  F13,
          TAB,    Q,    W,    E,    R,    T,  DEL,
          ESC,    A,    S,    D,    F,    G,
         MINS,    Z,    X,    C,    V,    B, LBRC,
-          NO, LGUI, RALT, LALT, LCTL,
-                                              NO,   NO,
+          F14, RALT, LGUI, LALT, LCTL,
+                                             F15,  F16,
                                                    FN1,
                                       LSFT,  SPC,  FN0,
 
         // right hand
-                NO,    6,    7,    8,    9,    0,   NO,
+               F17,    6,    7,    8,    9,    0,  F18,
               BSPC,    Y,    U,    I,    O,    P, BSLS,
                        H,    J,    K,    L, SCLN, QUOT,
               RBRC,    N,    M, COMM,  DOT, SLSH,  EQL,
-                          RCTL, LALT, RALT, RGUI,   NO,
-          NO,   NO,
+                          RCTL, LALT, RGUI, RALT,  F19,
+         F20,  F21,
          FN1,
          FN0,  ENT, RSFT
         ),
@@ -27,7 +27,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           NO,   NO,   NO,   NO,   NO,   NO,   NO,
         CAPS,   NO,   NO,   NO,   NO,   NO,
           NO, HOME, PGDN, PGUP,  END,   NO,   NO,
-          NO, LGUI, RALT, LALT, LCTL,
+        PSCR, RALT, LGUI, LALT, LCTL,
                                               NO,   NO,
                                                     NO,
                                       LSFT,   NO,  FN0,
@@ -37,7 +37,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                 NO,   NO, MSTP, MPLY, MPRV, MNXT,   NO,
                       NO,   NO,   NO,   NO,   NO,   NO,
                 NO,   NO, LEFT, DOWN,   UP, RGHT,   NO,
-                          RCTL, LALT, RALT, RGUI,   NO,
+                          RCTL, LALT, RGUI, RALT,   NO,
           NO,   NO,
           NO,
          FN0,   NO, RSFT
