@@ -99,7 +99,6 @@ OPT_DEFS += -DINTERRUPT_CONTROL_ENDPOINT
 #   LUFA bootloader  4096
 OPT_DEFS += -DBOOTLOADER_SIZE=512
 
-
 # Build Options
 #   comment out to disable the options.
 #
@@ -118,6 +117,7 @@ INVERT_NUMLOCK = yes 	# invert state of NumLock led
 VPATH += $(TARGET_DIR)
 VPATH += $(TOP_DIR)
 
+include $(TOP_DIR)/protocol.mk
 include $(TOP_DIR)/protocol/lufa.mk
 include $(TOP_DIR)/common.mk
 include $(TOP_DIR)/rules.mk
