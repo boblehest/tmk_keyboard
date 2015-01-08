@@ -74,7 +74,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     { KC_##k0C,KC_##k1C,KC_##k2C,KC_##k3C,KC_##k4C,KC_##k5C},   \
     { KC_##k0D,KC_##k1D,KC_##k2D,KC_##k3D,KC_##k4D,KC_NO   }    \
    }
-#define KEYMAP_BOBLEHEST
 #if defined(KEYMAP_DVORAK)
 #include "keymap_dvorak.h"
 #elif defined(KEYMAP_COLEMAK)
