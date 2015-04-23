@@ -70,8 +70,8 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Fn action definition
  */
 static const uint16_t PROGMEM fn_actions[] = {
-    ACTION_LAYER_INVERT(1, ON_BOTH),
-    ACTION_LAYER_TOGGLE(2),
+    ACTION_LAYER_MOMENTARY(1),
+    ACTION_LAYER_INVERT(2, ON_PRESS),
     ACTION_MODS_KEY(MOD_LSFT, KC_9),
     ACTION_MODS_KEY(MOD_LSFT, KC_0),
 };
