@@ -70,7 +70,8 @@ static void layer_state_set(uint32_t state)
     if (layer_state & 4) {
       ergodox_right_led_2_on();
     }
-    if (layer_state & 2) {
+
+    if (layer_state & (2 | 8)) {
       ergodox_right_led_3_on();
     }
 }
