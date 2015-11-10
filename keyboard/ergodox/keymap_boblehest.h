@@ -5,10 +5,10 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          TAB,    Q,    W,    E,    R,    T,  DEL,
          ESC,    A,    S,    D,    F,    G,
         MINS,    Z,    X,    C,    V,    B, LBRC,
-          F14, RALT, LGUI, LALT, LCTL,
-                                             F15,  F16,
-                                                   FN1,
-                                      LSFT,  SPC,  FN0,
+         F14, RALT, LSFT, LALT, LCTL,
+                                             F15,  FN1,
+                                                    NO,
+                                      LGUI,  SPC,  FN0,
 
         // right hand
               CAPS,    6,    7,    8,    9,    0,  F18,
@@ -16,21 +16,22 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                        H,    J,    K,    L, SCLN, QUOT,
               RBRC,    N,    M, COMM,  DOT, SLSH,  EQL,
                           RCTL, LALT, RGUI, RALT,  F19,
-         F20,  F21,
-         FN1,
+         FN1,  F21,
+          NO,
          FN0,  ENT, RSFT
         ),
 
+// FUNCTION KEYS AND OTHER RARELY USED KEYS ///////////////////////////////
     KEYMAP( // layer 1
          // left hand
           NO,   F1,   F2,   F3,   F4,   F5,  F11,
           NO,   NO,   NO,   NO,   NO,   NO,   NO,
           NO,   NO,   NO,   NO,   NO,   NO,
           NO,   NO,   NO,   NO,   NO,   NO,   NO,
-        PSCR, RALT, LGUI, LALT, LCTL,
+        PSCR, RALT, LSFT, LALT, LCTL,
                                               NO,   NO,
                                                     NO,
-                                      LSFT,   NO,  FN0,
+                                      LGUI,   NO,  FN0,
 
         // right hand
                F12,   F6,   F7,   F8,   F9,  F10,   NO,
@@ -43,14 +44,15 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          FN0,   NO, RSFT
         ),
 
+// NUMERIC INPUT //////////////////////////////////////////////////////////
     KEYMAP( // layer 2
          // left hand
           NO,   NO,   NO,   NO,   NO,   NO,   NO,
-         TAB,   NO,   NO,  FN2,  FN3,   NO,  DEL,
+         TAB,   NO,   NO,  FN3,  FN4,   NO,  DEL,
          ESC, PSLS, PAST, PMNS, PPLS,   NO,
           NO,   NO,    A,    B,    C,   NO,   NO,
           NO,   NO,    D,    E,    F,
-                                              NO,   NO,
+                                              NO,  FN2,
                                                    FN1,
                                         NO,  SPC,   NO,
 
@@ -60,9 +62,32 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                        4,    5,    6,   NO,   NO,   NO,
                 NO,    1,    2,    3,   NO,   UP,   NO,
                           COMM,  DOT, LEFT, DOWN, RGHT,
-          NO,   NO,
+         FN2,   NO,
          FN1,
           NO,  ENT,    0
+        ),
+
+// GAME INPUT /////////////////////////////////////////////////////////////
+    KEYMAP( // layer 3
+         // left hand
+         GRV,    1,    2,    3,    4,    5,    6,
+         ESC,    Q,    W,    E,    R,    T,  DEL,
+         TAB,    A,    S,    D,    F,    G,
+        MINS,    Z,    X,    C,    V,    B, LBRC,
+          F14, RALT, LGUI, LALT, LCTL,
+                                             F15,   NO,
+                                                   FN2,
+                                      LSFT,  SPC,   NO,
+
+        // right hand
+                NO,   NO,   NO,   NO,   NO,   NO,   NO,
+                NO,   NO,   NO,   NO,   NO,   NO,   NO,
+                      NO,   NO,   NO,   NO,   NO,   NO,
+                NO,   NO,   NO,   NO,   NO,   UP,   NO,
+                            NO,   NO,   NO,   NO,   NO,
+          NO,   NO,
+         FN2,
+          NO,   NO,   NO
         )
 };
 
@@ -72,6 +97,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 static const uint16_t PROGMEM fn_actions[] = {
     ACTION_LAYER_MOMENTARY(1),
     ACTION_LAYER_INVERT(2, ON_PRESS),
+    ACTION_LAYER_INVERT(3, ON_PRESS),
     ACTION_MODS_KEY(MOD_LSFT, KC_9),
     ACTION_MODS_KEY(MOD_LSFT, KC_0),
 };
