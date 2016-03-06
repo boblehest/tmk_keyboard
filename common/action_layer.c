@@ -67,13 +67,17 @@ static void layer_state_set(uint32_t state)
     clear_keyboard_but_mods(); // To avoid stuck keys
     ergodox_right_led_2_off();
     ergodox_right_led_3_off();
-    if (layer_state & 4) {
-      ergodox_right_led_2_on();
-    }
 
-    if (layer_state & (2 | 8)) {
-      ergodox_right_led_3_on();
-    }
+	if (layer_state & 8) {
+		ergodox_right_led_2_on();
+	} else {
+		if (layer_state & 2) {
+			ergodox_right_led_3_on();
+		}
+		if (layer_state & 4) {
+			ergodox_right_led_2_on();
+		}
+	}
 }
 
 void layer_clear(void)
