@@ -24,7 +24,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // NUMERIC INPUT //////////////////////////////////////////////////////////
     KEYMAP( // layer 2
          // left hand
-          NO,   NO,   NO,   NO,   NO,   NO,   NO,
+          NO,   F1,   F2,   F3,   F4,   F5,  F11,
          TAB,   NO,   NO,  FN3,  FN4,   NO,  DEL,
          ESC, PSLS, PAST, PMNS, PPLS,   NO,
           NO,   NO,    A,    B,    C,   NO,   NO,
@@ -34,7 +34,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                         NO,  SPC,   NO,
 
         // right hand
-                NO,   NO,   NO,   NO,   NO,   NO,   NO,
+               F12,   F6,   F7,   F8,   F9,  F10,   NO,
               BSPC,    7,    8,    9,   NO,   NO,   NO,
                        4,    5,    6,   NO,   NO,   NO,
                 NO,    1,    2,    3,   NO,   UP,   NO,
