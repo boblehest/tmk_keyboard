@@ -12,7 +12,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         // right hand
               CAPS,    6,    7,    8,    9,    0,  F18,
-              BSPC,    Y,    U,    I,    O,    P, NUBS,
+              BSPC,    Y,    U,    I,    O,    P, BSLS,
                        H,    J,    K,    L, SCLN, QUOT,
               RBRC,    N,    M, COMM,  DOT, SLSH,  EQL,
                           RCTL, LALT, RGUI, RALT,  APP,
