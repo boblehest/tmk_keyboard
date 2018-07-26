@@ -60,15 +60,15 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               CAPS,    6,    7,    8,    9,    0,  F18,
               BSPC,    Y,    U,    I,    O,    P, NUBS,
                        H,    J,    K,    L, SCLN, QUOT,
-              RBRC,    N,    M, COMM,  DOT, SLSH,  EQL,
-                          RCTL, LALT, RGUI, RALT,  APP,
+              RBRC,    N,    M, COMM,  DOT,   UP,  EQL,
+                          RCTL, LALT, LEFT, DOWN, RGHT,
           NO,  F21,
          FN2,
          FN0,  ENT, RSFT
         ),
 
 // FUNCTION KEYS AND OTHER RARELY USED KEYS ///////////////////////////////
-    KEYMAP( // layer 1
+    KEYMAP( // layer 4
          // left hand
           NO,   F1,   F2,   F3,   F4,   F5,  F11,
           NO,   NO,   NO,   NO,   NO,   NO,   NO,
